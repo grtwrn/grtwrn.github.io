@@ -67,6 +67,12 @@ h2 {
   margin-top: 0;
 }
 
+.project-image {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
 .project .status {
   font-size: 0.85rem;
   color: #6b6b6b;
