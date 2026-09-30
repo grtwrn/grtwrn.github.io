@@ -7,8 +7,93 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Garrett Warren</h1>
-  </main>
+
+<header>
+  <h1>Garrett Warren</h1>
+  <p class="subtitle">Hardware architect turned builder — tech for neurodivergence, wellbeing, and human connection.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I'm a computer engineer (Brown '21) who worked in hardware architecture at NVIDIA.
+      Now I build full-time: small, real devices and tools that help people notice what's going on
+      around them and inside them, and act on it. I'm applying to the MIT Media Lab to do this as research.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <h3>StoveDetector</h3>
+      <p>
+        A small sensor that notices when a stove has been left on and unattended, and sounds an alert
+        before it becomes a fire. Started as a personal safety fix (formerly "KitchenEye"); now a
+        hardware startup heading into its first pilot homes. Custom carrier board, Wi-Fi alerts,
+        and a pre-pilot FCC compliance process I'm running myself.
+      </p>
+      <p><a href="https://stovedetector.com">stovedetector.com</a></p>
+      <p class="status">Status: founder, pre-pilot, 2026</p>
+    </article>
+
+    <article class="project">
+      <h3>The Louis: MIDI Trumpet</h3>
+      <img src="images/the-louis-hero.png" alt="The Louis, an assembled MIDI trumpet prototype" class="project-image">
+      <p>
+        An affordable MIDI trumpet built to look, feel and sound like the real thing, so remote-learning
+        students could practice without the cost or noise of an actual trumpet. Real valve springs and
+        mouthpiece, a 3D-printed body, an I2S mic reading the mouthpiece buzz, valve sensors, and a
+        Raspberry Pi + Teensy for signal processing, all for under $150 in parts.
+      </p>
+      <p>
+        Senior capstone at Brown (ENGN 1001), April 2021, with Riad Hallal, Nathan Plano and Albin Wells.
+      </p>
+      <p class="status">Status: completed, 2021</p>
+    </article>
+
+    <article class="project">
+      <h3>Planter Waterer</h3>
+      <img src="images/planter-waterer.jpg" alt="3D-printed self-watering spike inserted into a potted plant" class="project-image">
+      <p>
+        A 3D-printed conical spike that sits in the soil and slowly releases water, so a potted plant
+        can go longer between waterings.
+      </p>
+      <p class="status">Status: built</p>
+    </article>
+
+    <article class="project">
+      <h3>Future You: Authenticity Detector</h3>
+      <p>
+        Extends the MIT Media Lab's "Future You" work: records your face during conversations with your
+        future self and flags moments of discomfort or disengagement, to help separate what you actually
+        feel from the answer you've rehearsed.
+      </p>
+      <p class="status">Status: in development</p>
+    </article>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:garrett_warren@alumni.brown.edu">garrett_warren@alumni.brown.edu</a>
+      · <a href="https://github.com/grtwrn">github.com/grtwrn</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Garrett Warren</p>
+</footer>
+
 </body>
 </html>
