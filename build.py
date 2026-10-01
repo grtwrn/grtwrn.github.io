@@ -146,11 +146,12 @@ def build_index(data):
 </section>
 
 <main>
-  <div class="grid" id="featured">{sidebar}{featured}
+  <h2 class="grid-heading grid-heading-first" id="featured">Featured</h2>
+  <div class="grid grid-full">{featured}
   </div>
 
   <h2 class="grid-heading" id="projects">More Projects</h2>
-  <div class="grid grid-full">{projects}
+  <div class="grid">{sidebar}{projects}
   </div>
 
   <h2 class="grid-heading" id="house-prints">House 3D Prints</h2>

@@ -129,6 +129,8 @@ main {
   font-weight: 700;
 }
 
+.grid-heading-first { margin-top: 48px; }
+
 /* Sidebar */
 .sidebar {
   padding: 60px 40px 40px 75px;
