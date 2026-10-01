@@ -82,6 +82,23 @@
     </article>
 
     <article class="project">
+      <h3>Yale Shuttle Tracker</h3>
+      <p>
+        A live map, stop-by-stop arrival times and a trip planner for Yale's Downtowner shuttles.
+        It polls the shuttle GPS feed every 5 seconds and builds its own history of arrivals, dwell
+        times and travel times between stops. Predictions are calibrated from what the buses actually
+        did on that stretch of route at that hour and day of the week, not from the published
+        timetable. The planner routes between any two points, including the walking legs.
+      </p>
+      <p>
+        A single Node service with a React front end and SQLite, plus automated map and data checks
+        that catch bad predictions before riders see them.
+      </p>
+      <p><a href="https://yale-shuttle.fly.dev">yale-shuttle.fly.dev</a></p>
+      <p class="status">Status: live, 2026</p>
+    </article>
+
+    <article class="project">
       <h3>Future You: Attune</h3>
       <p>
         A sensing plugin for MIT Media Lab's <em>Future You</em>, where people talk with an AI simulation
