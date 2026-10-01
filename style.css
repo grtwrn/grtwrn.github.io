@@ -266,6 +266,7 @@ main {
 
 .project-shot { margin: 32px 0 0; }
 .project-shot img { display: block; width: 100%; max-width: 380px; height: auto; }
+.project-shot + .project-shot { margin-top: 24px; }
 
 .project-page {
   display: grid;

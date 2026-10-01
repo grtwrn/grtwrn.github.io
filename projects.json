@@ -90,13 +90,17 @@
       "slug": "yale-shuttle",
       "title": "Yale Shuttle Tracker",
       "image": "images/yale-shuttle.jpg",
-      "imagePosition": "50% 45%",
+      "imagePosition": "50% 30%",
       "summary": "A live map, stop-by-stop arrival times and a trip planner for Yale's Downtowner shuttles, predicted from what the buses actually did.",
       "body": [
         "A live map, stop-by-stop arrival times and a trip planner for Yale's Downtowner shuttles. It polls the shuttle GPS feed every 5 seconds and builds its own history of arrivals, dwell times and travel times between stops. Predictions are calibrated from what the buses actually did on that stretch of route at that hour and day of the week, not from the published timetable. The planner routes between any two points, including the walking legs.",
         "A single Node service (Hono, SQLite) with a React front end, plus automated map and data checks that catch bad predictions before riders see them."
       ],
       "screenshots": [
+        {
+          "src": "images/yale-shuttle-landing.png",
+          "alt": "Landing page: a 'Where do you want to go?' search box, live weather, how many shuttles are reporting, and one-tap destinations like Union Station and Science Hill."
+        },
         {
           "src": "images/yale-shuttle-trip.png",
           "alt": "Trip card for Division / Prospect to Schwarzman Center: Red and Blue Day options on a map, with board-in and arrival times next to walking."
