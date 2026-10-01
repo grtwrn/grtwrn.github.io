@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "slug": "stovedetector",
+      "title": "StoveDetector",
+      "image": "images/stovedetector.jpg",
+      "imagePosition": "50% 45%",
+      "summary": "A small sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire.",
+      "body": [
+        "A small sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire. Started as a personal safety fix (formerly \"KitchenEye\"); now a hardware startup heading into its first pilot homes.",
+        "Custom carrier board, Wi-Fi alerts, and a pre-pilot FCC compliance process I'm running myself."
+      ],
+      "links": [{ "label": "stovedetector.com", "url": "https://stovedetector.com" }],
+      "context": "Founder · 2026",
+      "status": "Pre-pilot",
+      "tags": ["hardware", "safety", "startup"]
+    },
+    {
+      "slug": "the-louis",
+      "title": "The Louis: MIDI Trumpet",
+      "image": "images/the-louis-hero.png",
+      "imagePosition": "90% 50%",
+      "summary": "An affordable MIDI trumpet built to look, feel and sound like the real thing, for under $150 in parts.",
+      "body": [
+        "An affordable MIDI trumpet built to look, feel and sound like the real thing, so remote-learning students could practice without the cost or noise of an actual trumpet.",
+        "Real valve springs and mouthpiece, a 3D-printed body, an I2S mic reading the mouthpiece buzz, valve sensors, and a Raspberry Pi + Teensy for signal processing, all for under $150 in parts.",
+        "Senior capstone at Brown (ENGN 1001), April 2021."
+      ],
+      "links": [{ "label": "Full write-up (PDF, 32 pages)", "url": "docs/the-louis-final-report.pdf" }],
+      "context": "Brown ENGN 1001 · 2021",
+      "people": "with Riad Hallal · Nathan Plano · Albin Wells",
+      "status": "Completed",
+      "tags": ["music", "hardware", "embedded"]
+    },
+    {
+      "slug": "future-you-attune",
+      "title": "Future You: Attune",
+      "summary": "A sensing plugin for MIT Media Lab's Future You that reads how you answer (face, voice and heart rate), not just what you type.",
+      "body": [
+        "A sensing plugin for MIT Media Lab's <em>Future You</em>, where people talk with an AI simulation of their older self. Future You builds that persona only from what you type; Attune also watches <em>how</em> you answer: face (MediaPipe blendshapes), voice (pitch, loudness, pauses) and heart rate from a Bluetooth strap. The output is an affect profile and a persona prompt, so the future-self conversation knows which topics made you tense, energised, hesitant or calm.",
+        "Signals, not verdicts: every feature is measured against your own 45-second resting baseline, it never outputs emotion labels, and your self-report overrides the sensors when they disagree. All sensing runs locally in the browser."
+      ],
+      "context": "2026",
+      "status": "In development",
+      "tags": ["wellbeing", "affective computing", "AI"]
+    },
+    {
+      "slug": "video-journal",
+      "title": "Video Journal",
+      "summary": "A short nightly video journal: talk to the camera for a few minutes, with no editing and no correcting yourself.",
+      "body": [
+        "A short nightly video journal: talk to the camera for a few minutes, with no editing and no correcting yourself, and watch your own story and mood take shape over weeks."
+      ],
+      "context": "2026",
+      "status": "In development",
+      "tags": ["wellbeing", "reflection"]
+    },
+    {
+      "slug": "yale-shuttle",
+      "title": "Yale Shuttle Tracker",
+      "summary": "A live map, stop-by-stop arrival times and a trip planner for Yale's Downtowner shuttles, predicted from what the buses actually did.",
+      "body": [
+        "A live map, stop-by-stop arrival times and a trip planner for Yale's Downtowner shuttles. It polls the shuttle GPS feed every 5 seconds and builds its own history of arrivals, dwell times and travel times between stops. Predictions are calibrated from what the buses actually did on that stretch of route at that hour and day of the week, not from the published timetable. The planner routes between any two points, including the walking legs.",
+        "A single Node service with a React front end and SQLite, plus automated map and data checks that catch bad predictions before riders see them."
+      ],
+      "links": [{ "label": "yale-shuttle.fly.dev", "url": "https://yale-shuttle.fly.dev" }],
+      "context": "2026",
+      "status": "Live",
+      "tags": ["transit", "data", "software"]
+    },
+    {
+      "slug": "amplify-the-good",
+      "title": "Amplify the Good",
+      "summary": "Short-form sermon clips for social media, from two New Haven congregations, picked and cut by a pipeline I approve from my phone.",
+      "body": [
+        "Short-form sermon clips for social media, from United Church on the Green and the Young Prophets Collective in New Haven.",
+        "A pipeline pulls sermon captions, picks out quotable moments and cuts preview clips; each morning I approve or reject five from my phone, and the approved ones get captioned and posted."
+      ],
+      "context": "2025–2026",
+      "status": "Running",
+      "tags": ["media", "community"]
+    },
+    {
+      "slug": "recursive-find",
+      "title": "Recursive Find",
+      "placeholder": true,
+      "tags": []
+    },
+    {
+      "slug": "drone",
+      "title": "Drone Project",
+      "placeholder": true,
+      "tags": ["drones"]
+    }
+  ],
+  "builds": [
+    {
+      "slug": "planter-waterer",
+      "title": "Planter Waterer",
+      "image": "images/planter-waterer.jpg",
+      "imagePosition": "50% 50%",
+      "summary": "A 3D-printed conical spike that sits in the soil and slowly releases water.",
+      "body": [
+        "A 3D-printed conical spike that sits in the soil and slowly releases water, so a potted plant can go longer between waterings."
+      ],
+      "status": "Built",
+      "tags": ["3D printing", "plants"]
+    },
+    {
+      "slug": "soil-sensor",
+      "title": "Soil Sensor",
+      "placeholder": true,
+      "tags": ["sensors", "plants"]
+    },
+    {
+      "slug": "bike-rack",
+      "title": "Bike Rack",
+      "placeholder": true,
+      "tags": ["home"]
+    },
+    {
+      "slug": "coat-rack",
+      "title": "Coat Rack",
+      "placeholder": true,
+      "tags": ["home"]
+    },
+    {
+      "slug": "toothbrush-holder",
+      "title": "Toothbrush Holder",
+      "placeholder": true,
+      "tags": ["3D printing", "home"]
+    }
+  ]
+}
