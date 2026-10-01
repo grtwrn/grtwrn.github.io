@@ -11,11 +11,12 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 EMAIL = "garrett_warren@alumni.brown.edu"
 GITHUB = "https://github.com/grtwrn"
-TAGLINE = "Hardware architect turned builder: tech for neurodivergence, wellbeing, and human connection."
+TAGLINE = "I build small, real things: tech for neurodivergence, wellbeing, and human connection."
 ABOUT = (
-    "I'm a computer engineer (Brown '21) who worked in hardware architecture at NVIDIA. "
-    "Now I build full-time: small, real devices and tools that help people notice what's "
-    "going on around them and inside them, and act on it."
+    "I'm a builder. I make small, real devices and tools that help people notice what's "
+    "going on around them and inside them, and act on it. I studied computer engineering "
+    "at Brown ('21), took a side quest in hardware architecture at NVIDIA, and now I'm "
+    "back to building full-time."
 )
 PLACEHOLDER = "Write-up and photos coming."
 
