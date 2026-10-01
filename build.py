@@ -84,7 +84,7 @@ def topbar(prefix):
   <a class="wordmark" href="{prefix}index.html">Garrett<br>Warren</a>
   <nav>
     <a href="{prefix}index.html#projects">Projects</a>
-    <a href="{prefix}index.html#builds">Builds</a>
+    <a href="{prefix}index.html#house-prints">3D Prints</a>
     <a href="{prefix}index.html#about">About</a>
     <a href="mailto:{EMAIL}">Contact</a>
   </nav>
@@ -116,7 +116,7 @@ def build_index(data):
         <p class="sidebar-label">On this page:</p>
         <ul class="sidebar-nav">
           <li><a class="active" href="#projects">Projects</a></li>
-          <li><a href="#builds">Small Builds</a></li>
+          <li><a href="#house-prints">House 3D Prints</a></li>
           <li><a href="#about">About</a></li>
         </ul>
         <hr>
@@ -127,7 +127,7 @@ def build_index(data):
         </ul>
       </aside>"""
     projects = "".join(tile(p) for p in data["projects"])
-    builds = "".join(tile(p) for p in data["builds"])
+    house_prints = "".join(tile(p) for p in data["housePrints"])
     body = f"""
 <section class="hero">
   <div class="hero-photos">
@@ -145,8 +145,8 @@ def build_index(data):
   <div class="grid" id="projects">{sidebar}{projects}
   </div>
 
-  <h2 class="grid-heading" id="builds">Small Builds</h2>
-  <div class="grid grid-full">{builds}
+  <h2 class="grid-heading" id="house-prints">House 3D Prints</h2>
+  <div class="grid grid-full">{house_prints}
   </div>
 
   <section class="about" id="about">
@@ -203,7 +203,7 @@ def main():
     data = json.loads((ROOT / "projects.json").read_text())
     (ROOT / "projects").mkdir(exist_ok=True)
     build_index(data)
-    for p in data["projects"] + data["builds"]:
+    for p in data["projects"] + data["housePrints"]:
         build_project(p)
 
 

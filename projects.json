@@ -10,10 +10,19 @@
         "A small sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire. Started as a personal safety fix (formerly \"KitchenEye\"); now a hardware startup heading into its first pilot homes.",
         "Custom carrier board, Wi-Fi alerts, and a pre-pilot FCC compliance process I'm running myself."
       ],
-      "links": [{ "label": "stovedetector.com", "url": "https://stovedetector.com" }],
+      "links": [
+        {
+          "label": "stovedetector.com",
+          "url": "https://stovedetector.com"
+        }
+      ],
       "context": "Founder · 2026",
       "status": "Pre-pilot",
-      "tags": ["hardware", "safety", "startup"]
+      "tags": [
+        "hardware",
+        "safety",
+        "startup"
+      ]
     },
     {
       "slug": "the-louis",
@@ -26,11 +35,20 @@
         "Real valve springs and mouthpiece, a 3D-printed body, an I2S mic reading the mouthpiece buzz, valve sensors, and a Raspberry Pi + Teensy for signal processing, all for under $150 in parts.",
         "Senior capstone at Brown (ENGN 1001), April 2021."
       ],
-      "links": [{ "label": "Full write-up (PDF, 32 pages)", "url": "docs/the-louis-final-report.pdf" }],
+      "links": [
+        {
+          "label": "Full write-up (PDF, 32 pages)",
+          "url": "docs/the-louis-final-report.pdf"
+        }
+      ],
       "context": "Brown ENGN 1001 · 2021",
       "people": "with Riad Hallal · Nathan Plano · Albin Wells",
       "status": "Completed",
-      "tags": ["music", "hardware", "embedded"]
+      "tags": [
+        "music",
+        "hardware",
+        "embedded"
+      ]
     },
     {
       "slug": "future-you-attune",
@@ -42,7 +60,11 @@
       ],
       "context": "2026",
       "status": "In development",
-      "tags": ["wellbeing", "affective computing", "AI"]
+      "tags": [
+        "wellbeing",
+        "affective computing",
+        "AI"
+      ]
     },
     {
       "slug": "video-journal",
@@ -53,7 +75,10 @@
       ],
       "context": "2026",
       "status": "In development",
-      "tags": ["wellbeing", "reflection"]
+      "tags": [
+        "wellbeing",
+        "reflection"
+      ]
     },
     {
       "slug": "yale-shuttle",
@@ -63,10 +88,19 @@
         "A live map, stop-by-stop arrival times and a trip planner for Yale's Downtowner shuttles. It polls the shuttle GPS feed every 5 seconds and builds its own history of arrivals, dwell times and travel times between stops. Predictions are calibrated from what the buses actually did on that stretch of route at that hour and day of the week, not from the published timetable. The planner routes between any two points, including the walking legs.",
         "A single Node service with a React front end and SQLite, plus automated map and data checks that catch bad predictions before riders see them."
       ],
-      "links": [{ "label": "yale-shuttle.fly.dev", "url": "https://yale-shuttle.fly.dev" }],
+      "links": [
+        {
+          "label": "yale-shuttle.fly.dev",
+          "url": "https://yale-shuttle.fly.dev"
+        }
+      ],
       "context": "2026",
       "status": "Live",
-      "tags": ["transit", "data", "software"]
+      "tags": [
+        "transit",
+        "data",
+        "software"
+      ]
     },
     {
       "slug": "amplify-the-good",
@@ -78,7 +112,10 @@
       ],
       "context": "2025–2026",
       "status": "Running",
-      "tags": ["media", "community"]
+      "tags": [
+        "media",
+        "community"
+      ]
     },
     {
       "slug": "recursive-find",
@@ -90,10 +127,48 @@
       "slug": "drone",
       "title": "Drone Project",
       "placeholder": true,
-      "tags": ["drones"]
+      "tags": [
+        "drones"
+      ]
+    },
+    {
+      "slug": "soil-sensor",
+      "title": "Soil Sensor",
+      "placeholder": true,
+      "tags": [
+        "sensors",
+        "plants"
+      ]
     }
   ],
-  "builds": [
+  "housePrints": [
+    {
+      "slug": "toothbrush-holder",
+      "title": "Toothbrush Holder",
+      "placeholder": true,
+      "tags": [
+        "3D printing",
+        "home"
+      ]
+    },
+    {
+      "slug": "bike-rack",
+      "title": "Bike Rack",
+      "placeholder": true,
+      "tags": [
+        "3D printing",
+        "home"
+      ]
+    },
+    {
+      "slug": "clothes-rack",
+      "title": "Clothes Rack",
+      "placeholder": true,
+      "tags": [
+        "3D printing",
+        "home"
+      ]
+    },
     {
       "slug": "planter-waterer",
       "title": "Planter Waterer",
@@ -104,31 +179,10 @@
         "A 3D-printed conical spike that sits in the soil and slowly releases water, so a potted plant can go longer between waterings."
       ],
       "status": "Built",
-      "tags": ["3D printing", "plants"]
-    },
-    {
-      "slug": "soil-sensor",
-      "title": "Soil Sensor",
-      "placeholder": true,
-      "tags": ["sensors", "plants"]
-    },
-    {
-      "slug": "bike-rack",
-      "title": "Bike Rack",
-      "placeholder": true,
-      "tags": ["home"]
-    },
-    {
-      "slug": "coat-rack",
-      "title": "Coat Rack",
-      "placeholder": true,
-      "tags": ["home"]
-    },
-    {
-      "slug": "toothbrush-holder",
-      "title": "Toothbrush Holder",
-      "placeholder": true,
-      "tags": ["3D printing", "home"]
+      "tags": [
+        "3D printing",
+        "plants"
+      ]
     }
   ]
 }
