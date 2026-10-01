@@ -178,6 +178,9 @@ def build_project(p):
         paras = f'<p class="todo">{PLACEHOLDER}</p>'
     else:
         paras = "".join(f"<p>{para}</p>" for para in p["body"])
+        paras += "".join(
+            f'<figure class="project-shot"><img src="{prefix}{escape(img["src"])}" alt="{escape(img["alt"])}"></figure>'
+            for img in p.get("screenshots", []))
     facts = []
     if p.get("context"):
         facts.append(escape(p["context"]))

@@ -264,6 +264,9 @@ main {
 
 .project-hero.tile-head-glyph span { font-size: 140px; }
 
+.project-shot { margin: 32px 0 0; }
+.project-shot img { display: block; width: 100%; max-width: 380px; height: auto; }
+
 .project-page {
   display: grid;
   grid-template-columns: 1fr 3fr;
