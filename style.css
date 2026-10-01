@@ -82,6 +82,12 @@ h2 {
   margin-bottom: 0;
 }
 
+.project .todo {
+  font-style: italic;
+  color: #9a9a9a;
+  margin-bottom: 0;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
