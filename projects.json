@@ -1,4 +1,9 @@
 {
+  "featured": [
+    "stovedetector",
+    "future-you-attune",
+    "yale-shuttle"
+  ],
   "projects": [
     {
       "slug": "stovedetector",

@@ -83,6 +83,7 @@ def topbar(prefix):
 <header class="topbar">
   <a class="wordmark" href="{prefix}index.html">Garrett<br>Warren</a>
   <nav>
+    <a href="{prefix}index.html#featured">Featured</a>
     <a href="{prefix}index.html#projects">Projects</a>
     <a href="{prefix}index.html#house-prints">3D Prints</a>
     <a href="{prefix}index.html#about">About</a>
@@ -115,7 +116,8 @@ def build_index(data):
       <aside class="sidebar">
         <p class="sidebar-label">On this page:</p>
         <ul class="sidebar-nav">
-          <li><a class="active" href="#projects">Projects</a></li>
+          <li><a class="active" href="#featured">Featured</a></li>
+          <li><a href="#projects">More Projects</a></li>
           <li><a href="#house-prints">House 3D Prints</a></li>
           <li><a href="#about">About</a></li>
         </ul>
@@ -126,7 +128,9 @@ def build_index(data):
           <li><a href="{GITHUB}">GitHub</a></li>
         </ul>
       </aside>"""
-    projects = "".join(tile(p) for p in data["projects"])
+    by_slug = {p["slug"]: p for p in data["projects"]}
+    featured = "".join(tile(by_slug[s]) for s in data["featured"])
+    projects = "".join(tile(p) for p in data["projects"] if p["slug"] not in data["featured"])
     house_prints = "".join(tile(p) for p in data["housePrints"])
     body = f"""
 <section class="hero">
@@ -142,7 +146,11 @@ def build_index(data):
 </section>
 
 <main>
-  <div class="grid" id="projects">{sidebar}{projects}
+  <div class="grid" id="featured">{sidebar}{featured}
+  </div>
+
+  <h2 class="grid-heading" id="projects">More Projects</h2>
+  <div class="grid grid-full">{projects}
   </div>
 
   <h2 class="grid-heading" id="house-prints">House 3D Prints</h2>
