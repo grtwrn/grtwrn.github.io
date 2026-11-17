@@ -125,6 +125,47 @@
       ]
     },
     {
+      "slug": "ucg-asset-map",
+      "title": "UCG Asset Map",
+      "image": "images/ucg-asset-map.jpg",
+      "imagePosition": "50% 50%",
+      "summary": "A shared mind map, map, calendar and directory of the help available to neighbors on the New Haven Green, edited live by a church team.",
+      "body": [
+        "A shared workspace for United Church on the Green, built around one question: how can the church support neighbors on the New Haven Green who are experiencing homelessness and the effects of poverty? The team records every organization, service and idea as a card, and the same cards show up in four views: a mind map for thinking, a street map for where things are, a calendar for when they are open, and a directory for looking things up.",
+        "Everyone edits the same map at once. The map is a Yjs document synced over WebSockets, so two people can type in the same card, and edits made during a dropped connection stay on the device and are sent again when it returns. Every save is kept in a version history. Accounts are created with an invite code, and nothing is visible without signing in.",
+        "A small Node server with a vanilla JS front end, bundled with esbuild and hosted on Fly.io. Every push to main is tested and deployed automatically."
+      ],
+      "screenshots": [
+        {
+          "src": "images/ucg-asset-map-mindmap.jpg",
+          "alt": "Mind map view: the central question branches into groups such as New Haven nonprofits, which opens into organizations like Columbus House and the services each one offers.",
+          "wide": true
+        },
+        {
+          "src": "images/ucg-asset-map-map.jpg",
+          "alt": "Map view: organizations and services pinned on a street map of New Haven around the Green, with group filters in a sidebar.",
+          "wide": true
+        },
+        {
+          "src": "images/ucg-asset-map-calendar.jpg",
+          "alt": "Calendar view: a week of meals, food pantries and drop-in hours, color-coded by the kind of help.",
+          "wide": true
+        },
+        {
+          "src": "images/ucg-asset-map-directory.jpg",
+          "alt": "Directory view: the same cards as a searchable, collapsible list, with the New Haven nonprofits group expanded.",
+          "wide": true
+        }
+      ],
+      "context": "2026",
+      "status": "Live (members only)",
+      "tags": [
+        "community",
+        "collaboration",
+        "software"
+      ]
+    },
+    {
       "slug": "amplify-the-good",
       "title": "Amplify the Good",
       "summary": "Short-form sermon clips for social media, from two New Haven congregations, picked and cut by a pipeline I approve from my phone.",
