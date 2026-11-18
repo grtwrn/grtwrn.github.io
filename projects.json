@@ -1,7 +1,7 @@
 {
   "featured": [
     "stovedetector",
-    "future-you-attune",
+    "future-you-affect-extension",
     "yale-shuttle",
     "recursive-find"
   ],
@@ -33,18 +33,50 @@
     {
       "slug": "the-louis",
       "title": "The Louis: MIDI Trumpet",
-      "image": "images/the-louis-hero.png",
-      "imagePosition": "90% 50%",
+      "image": "images/the-louis-front.jpg",
+      "imagePosition": "50% 50%",
       "summary": "An affordable MIDI trumpet built to look, feel and sound like the real thing, for under $150 in parts.",
       "body": [
         "An affordable MIDI trumpet built to look, feel and sound like the real thing, so remote-learning students could practice without the cost or noise of an actual trumpet.",
         "Real valve springs and mouthpiece, a 3D-printed body, an I2S mic reading the mouthpiece buzz, valve sensors, and a Raspberry Pi + Teensy for signal processing, all for under $150 in parts.",
-        "Senior capstone at Brown (ENGN 1001), April 2021."
+        "Inspired by David Baylies' <a href=\"https://www.openstella.com/\">Stella electronic trumpet</a>. Our note-detection code builds on his <a href=\"https://github.com/dbaylies/Stella\">open-source Stella code</a>, and David advised us directly during development.",
+        "Senior capstone at Brown (ENGN 1001), April 2021.",
+        "<strong><a href=\"../docs/the-louis-final-report.pdf\">Read the full write-up (32-page PDF) &rarr;</a></strong> Design, signal processing, testing and what we'd change."
+      ],
+      "screenshots": [
+        {
+          "src": "images/the-louis-front.jpg",
+          "alt": "The finished Louis: real mouthpiece and valves, 3D-printed gold bell, with the Raspberry Pi and Teensy board mounted beside the valves."
+        },
+        {
+          "src": "images/the-louis-back.jpg",
+          "alt": "The other side of the Louis, with the battery pack strapped behind the bell."
+        },
+        {
+          "src": "images/the-louis-electronics.jpg",
+          "alt": "Close-up of the electronics: a Teensy on a Raspberry Pi hat, wired to the mouthpiece mic and valve sensors."
+        },
+        {
+          "src": "images/the-louis-mouthpiece-mic.jpg",
+          "alt": "The I2S microphone board taped into the leadpipe, where it picks up the player's buzz."
+        },
+        {
+          "src": "images/the-louis-valve-sensors.jpg",
+          "alt": "Valve sensors: resistors and contacts at the bottom of each valve casing detect which valves are pressed."
+        },
+        {
+          "src": "images/the-louis-cad.jpg",
+          "alt": "Early CAD model of the Louis, annotated with where the mouthpiece, airflow tube and finger rings go."
+        }
       ],
       "links": [
         {
-          "label": "Full write-up (PDF, 32 pages)",
+          "label": "Read the full write-up (PDF)",
           "url": "docs/the-louis-final-report.pdf"
+        },
+        {
+          "label": "Stella electronic trumpet (inspiration)",
+          "url": "https://www.openstella.com/"
         }
       ],
       "context": "Brown ENGN 1001 · 2021",
@@ -57,11 +89,11 @@
       ]
     },
     {
-      "slug": "future-you-attune",
-      "title": "Future You: Attune",
+      "slug": "future-you-affect-extension",
+      "title": "Future You: Affect Extension",
       "summary": "A sensing plugin for MIT Media Lab's Future You that reads how you answer (face, voice and heart rate), not just what you type.",
       "body": [
-        "A sensing plugin for MIT Media Lab's <em>Future You</em>, where people talk with an AI simulation of their older self. Future You builds that persona only from what you type; Attune also watches <em>how</em> you answer: face (MediaPipe blendshapes), voice (pitch, loudness, pauses) and heart rate from a Bluetooth strap. The output is an affect profile and a persona prompt, so the future-self conversation knows which topics made you tense, energised, hesitant or calm.",
+        "A sensing plugin for MIT Media Lab's <em>Future You</em>, where people talk with an AI simulation of their older self. Future You builds that persona only from what you type; The extension also watches <em>how</em> you answer: face (MediaPipe blendshapes), voice (pitch, loudness, pauses) and heart rate from a Bluetooth strap. The output is an affect profile and a persona prompt, so the future-self conversation knows which topics made you tense, energised, hesitant or calm.",
         "Signals, not verdicts: every feature is measured against your own 45-second resting baseline, it never outputs emotion labels, and your self-report overrides the sensors when they disagree. All sensing runs locally in the browser."
       ],
       "context": "2026",
@@ -70,6 +102,23 @@
         "wellbeing",
         "affective computing",
         "AI"
+      ]
+    },
+    {
+      "slug": "thermal-self-observation",
+      "title": "Thermal Self-Observation",
+      "summary": "An exploratory thermal-camera study of surface warmth across my head, chest and body while I work at a laptop.",
+      "body": [
+        "I want to use a thermal camera to observe warm spots across my head, chest and body while working at my laptop, and explore how those patterns change over a work session.",
+        "An early affective-computing portfolio concept for my MIT Media Lab application, not a completed experiment. I plan to pair thermal observations with my own notes about the experience.",
+        "Thermal images show surface temperature, not emotions or core body temperature. Clothing, room temperature, movement and camera position affect readings; connections to subjective state remain questions to investigate, not validated claims."
+      ],
+      "context": "2026",
+      "status": "Concept",
+      "tags": [
+        "affective computing",
+        "thermal imaging",
+        "self-observation"
       ]
     },
     {
@@ -166,6 +215,31 @@
       ]
     },
     {
+      "slug": "agent-dashboard",
+      "title": "Agent Dashboard",
+      "image": "images/agent-dashboard-demo.png",
+      "imagePosition": "50% 0%",
+      "summary": "One home base for my AI agents: ask once, it routes to the right specialist, and it only interrupts me when an agent truly needs me.",
+      "body": [
+        "A private home base for the AI agents that help run my projects (built on OpenClaw). I type a request once and it goes to the right specialist: a local embedding model matches it against each agent's profile, with an LLM router as the fallback. Conversations are grouped by project, live work streams in as it happens, and anything an agent is actually blocked on (an approval, a question) lands in one Inbox, kept separate from the to-do list, so nothing nags unless it needs me.",
+        "A nightly cleanup asks each idle chat's agent to save what mattered before the chat is archived.",
+        "Plain Node and vanilla JS with no dependencies or build step. It runs locally only and talks to the OpenClaw Gateway over its WebSocket protocol with least-privilege access."
+      ],
+      "screenshots": [
+        {
+          "src": "images/agent-dashboard-demo.png",
+          "alt": "Home: one 'What would you like to work on?' box that auto-picks an agent, with five chats open side by side in named sections, each showing a one-line summary of the agent's latest reply. (Demo data.)"
+        }
+      ],
+      "context": "2026",
+      "status": "In daily use",
+      "tags": [
+        "AI agents",
+        "productivity",
+        "software"
+      ]
+    },
+    {
       "slug": "amplify-the-good",
       "title": "Amplify the Good",
       "summary": "Short-form sermon clips for social media, from two New Haven congregations, picked and cut by a pipeline I approve from my phone.",
@@ -175,6 +249,12 @@
       ],
       "context": "2025–2026",
       "status": "Running",
+      "links": [
+        {
+          "label": "Facebook page",
+          "url": "https://www.facebook.com/profile.php?id=61589016382258"
+        }
+      ],
       "tags": [
         "media",
         "community"
@@ -183,32 +263,243 @@
     {
       "slug": "recursive-find",
       "title": "Recursive Find",
-      "placeholder": true,
-      "tags": []
+      "image": "images/recursive-find-empty.png",
+      "imagePosition": "50% 50%",
+      "summary": "Ctrl+F, but recursive: a Chrome extension that searches the page you're on and every page it links to.",
+      "body": [
+        "Ctrl+F, but recursive. A Chrome side-panel extension that searches the page you're on <em>and every page it links to</em>, down to a depth you choose. Results stream in live, sorted by hit count, with a preview of each match. Click one and the page opens scrolled to the highlighted text.",
+        "Plain text, whole-word or regex matching, with options for match case, same site only, and stop at the first hit. Under the hood it's a breadth-first crawl that fetches each page once, strips it to text and runs Knuth–Morris–Pratt search across a pool of Web Workers, so pages are fetched and searched in parallel.",
+        "There's also <code>rfind</code>, a headless command-line version packaged as an AI agent skill. One call answers \"which pages on this site mention X?\" and returns only the matching pages with short snippets, with agent-safe defaults like a page cap and robots.txt support.",
+        "<strong><a href=\"https://chromewebstore.google.com/detail/recursive-find/iadjimgkagkoihafceiallheifeoiieg\">Get it on the Chrome Web Store &rarr;</a></strong>"
+      ],
+      "screenshots": [
+        {
+          "src": "images/recursive-find.png",
+          "alt": "Recursive Find in Chrome's side panel next to a Wikipedia article: searching 'texas' at depth 2 found 34 hits across 20 linked pages, each with highlighted snippets."
+        }
+      ],
+      "links": [
+        {
+          "label": "Chrome Web Store",
+          "url": "https://chromewebstore.google.com/detail/recursive-find/iadjimgkagkoihafceiallheifeoiieg"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/grtwrn/recursive-find"
+        }
+      ],
+      "context": "2026",
+      "status": "Live",
+      "tags": [
+        "browser extension",
+        "search",
+        "AI agents"
+      ]
     },
     {
       "slug": "drone",
-      "title": "Drone Project",
-      "placeholder": true,
+      "title": "PiDrone",
+      "image": "images/drone-hero.jpg",
+      "imagePosition": "50% 50%",
+      "summary": "An autonomous quadcopter that students build from scratch in Brown's intro robotics course, with state estimation, localization and SLAM running onboard on a Raspberry Pi.",
+      "body": [
+        "PiDrone is the quadcopter students build from a kit and program to fly on their own in Brown's intro robotics course, taught by Stefanie Tellex. Its brain is a Raspberry Pi running ROS, with a downward-facing camera, a range sensor and an IMU.",
+        "In summer 2018 I was one of four undergraduates on a research team (funded by a Karen T. Romer UTRA) that took the first version of the course and rebuilt it. We extended the drone's capabilities and reworked the assignments based on feedback from the first class. The core of it was autonomy that runs entirely onboard, in Python: an Unscented Kalman Filter that turns noisy sensor data into an accurate state estimate, plus Monte Carlo localization and FastSLAM so the drone can map a room and know where it is in it.",
+        "We tested each piece against motion-capture ground truth and published the framework as <a href=\"https://arxiv.org/abs/1910.03516\"><em>Advanced Autonomy on a Low-Cost Educational Drone Platform</em></a>, which I presented at IROS 2019 in Macau. Brown News <a href=\"https://www.brown.edu/news/2018-08-17/droneutra\">covered the project</a> that summer.",
+        "I also helped write the original <a href=\"https://web.archive.org/web/20221206081927/https://docs.duckietown.org/daffy/duckiesky_high_school/out/index.html\">Duckiesky</a> curriculum, which brought the drone to high school students: build guides, lessons on sensing, and lesson plans for the teachers running it.",
+        "<span class=\"credit\">Photos: Nick Dentamaro / Brown University.</span>"
+      ],
+      "screenshots": [
+        {
+          "src": "images/drone-cage.jpg",
+          "alt": "Garrett kneeling in the netted flight cage, setting a PiDrone down on the floor mat."
+        },
+        {
+          "src": "images/drone-laptop.jpg",
+          "alt": "Garrett coding on a laptop on the floor of the netted flight cage, with a PiDrone ready to fly and a teammate standing behind."
+        },
+        {
+          "src": "images/drone-code.jpg",
+          "alt": "Hands typing Python on a laptop next to a PiDrone with its LEDs lit."
+        },
+        {
+          "src": "images/drone-brown-grad.png",
+          "alt": "Brown's Graduate Programs list, showing the Engineering master's and Ph.D. cards, both photos from the PiDrone shoot.",
+          "caption": "Fun footnote: Brown still uses photos from this project on its site, including both Engineering grad program cards (<a href=\"https://graduateprograms.brown.edu/\">graduateprograms.brown.edu</a>).",
+          "wide": true
+        }
+      ],
+      "links": [
+        {
+          "label": "Paper (IROS 2019, arXiv)",
+          "url": "https://arxiv.org/abs/1910.03516"
+        },
+        {
+          "label": "Brown News story",
+          "url": "https://www.brown.edu/news/2018-08-17/droneutra"
+        },
+        {
+          "label": "Duckiesky curriculum (archived docs)",
+          "url": "https://web.archive.org/web/20221206081927/https://docs.duckietown.org/daffy/duckiesky_high_school/out/index.html"
+        }
+      ],
+      "context": "Brown University research · 2018–2019",
+      "status": "Published",
       "tags": [
-        "drones"
+        "drones",
+        "robotics",
+        "research"
       ]
     },
     {
       "slug": "soil-sensor",
       "title": "Soil Sensor",
-      "placeholder": true,
+      "image": "images/soil-sensor.jpg",
+      "imagePosition": "50% 50%",
+      "summary": "A battery-powered soil sensor package in a waterproof enclosure, with probes that go into the ground.",
+      "body": [
+        "A battery-powered soil sensor package in a waterproof enclosure, with probes that go into the ground. Built at Brown in summer 2019."
+      ],
+      "screenshots": [
+        {
+          "src": "images/soil-sensor-inside.jpg",
+          "alt": "Top view inside the enclosure: the battery and a perfboard with sensor breakout boards."
+        },
+        {
+          "src": "images/soil-sensor-probes.jpg",
+          "alt": "The sensor package on its 3D-printed base, with metal probes sticking out the front."
+        },
+        {
+          "src": "images/soil-sensor-angle.jpg",
+          "alt": "The closed enclosure from an angle, showing the probes and the cable underneath."
+        },
+        {
+          "src": "images/soil-sensor-layout.jpg",
+          "alt": "Planning the enclosure layout: the EnviroDIY Mayfly data logger, battery and sensor boards laid out on a paper sketch."
+        }
+      ],
+      "context": "Brown, summer 2019",
       "tags": [
         "sensors",
         "plants"
       ]
+    },
+    {
+      "slug": "quadcopter",
+      "title": "Quadcopter",
+      "image": "images/quadcopter.jpg",
+      "imagePosition": "50% 30%",
+      "summary": "A quadcopter built from scratch on a frame I designed and 3D-printed, funded by a grant I won for my high school's engineering club.",
+      "body": [
+        "A quadcopter built from scratch for the Penn Yan Academy engineering club. I won a grant from the school to buy the parts (motors, speed controllers, flight electronics), then designed and 3D-printed the frame myself.",
+        "The first version (2017) was flown with an RC transmitter; the second (2018) has a white printed frame with landing legs, topped with a green octopus."
+      ],
+      "screenshots": [
+        {
+          "src": "images/quadcopter-front.jpg",
+          "alt": "The white 3D-printed quadcopter from the front, with landing legs and a green octopus on top."
+        },
+        {
+          "src": "images/quadcopter-top.jpg",
+          "alt": "Top view of the white frame: the center plate, wiring and yellow speed controllers on each arm."
+        },
+        {
+          "src": "images/quadcopter-v1.jpg",
+          "alt": "The first version: a red and orange printed frame next to the RC transmitter."
+        }
+      ],
+      "context": "Penn Yan Academy engineering club · 2017–2018",
+      "status": "Built",
+      "tags": [
+        "drones",
+        "3D printing",
+        "hardware"
+      ]
+    },
+    {
+      "slug": "rubber-band-plane",
+      "title": "Rubber Band Plane",
+      "image": "images/rubber-band-plane-flight.jpg",
+      "imagePosition": "50% 40%",
+      "summary": "A lightweight rubber-band-powered plane with a balsa stick frame and thin, see-through wings, built following the Science Olympiad Wright Stuff construction guide.",
+      "body": [
+        "A lightweight rubber-band-powered plane with a balsa stick frame and thin, see-through wings, built following the Science Olympiad Wright Stuff construction guide."
+      ],
+      "screenshots": [
+        {
+          "src": "images/rubber-band-plane-flight.jpg",
+          "video": "images/rubber-band-plane-flight.mp4",
+          "alt": "The plane in flight across a school gym."
+        }
+      ],
+      "context": "2017",
+      "status": "Built",
+      "links": [
+        {
+          "label": "Built from: Wright Stuff construction tips (Chuck Markos, PDF)",
+          "url": "https://www.soinc.org/sites/default/files/uploaded_files/Wright%20Stuff%20Instructions-1.pdf"
+        }
+      ],
+      "tags": [
+        "mechanical"
+      ]
+    },
+    {
+      "slug": "arch-bridge",
+      "title": "Arch Bridge",
+      "image": "images/arch-bridge.jpg",
+      "imagePosition": "50% 45%",
+      "summary": "A wooden truss arch bridge, worked out first in cardboard and CAD, with the deck hung from the arches on cords.",
+      "body": [
+        "A wooden truss arch bridge, worked out first in cardboard and CAD, with the deck hung from the arches on cords.",
+        "I mocked up the truss geometry in cardboard, modeled the arch in CAD, then built it from plywood members bolted together with metal brackets. Blue cords hang the deck from the two arches."
+      ],
+      "screenshots": [
+        {
+          "src": "images/arch-bridge-cardboard.jpg",
+          "alt": "Cardboard mockup of the truss pieces laid out on a cutting mat."
+        },
+        {
+          "src": "images/arch-bridge-cad.jpg",
+          "alt": "The arch modeled in CAD on a laptop screen."
+        },
+        {
+          "src": "images/arch-bridge-front.jpg",
+          "alt": "The finished bridge from the front: two plywood arches with the deck hanging on blue cords."
+        }
+      ],
+      "context": "2017",
+      "status": "Built",
+      "tags": [
+        "mechanical",
+        "CAD"
+      ]
+    },
+    {
+      "slug": "balsa-bridge",
+      "title": "Balsa Bridge",
+      "image": "images/balsa-bridge-broken.jpg",
+      "imagePosition": "50% 50%",
+      "summary": "A balsa truss arch bridge that won my class's competition for the highest load-to-weight ratio.",
+      "body": [
+        "A balsa truss arch bridge that won my class's competition for the highest load-to-weight ratio.",
+        "I built a truss arch from balsa sticks and reinforced every joint with paper gussets so the load spread into the members instead of tearing the glue joints apart. On test day we loaded it from a hanger under the deck until it failed. It held the most weight for its own weight of any bridge in the class."
+      ],
+      "context": "2016",
+      "status": "Built",
+      "tags": [
+        "mechanical"
+      ],
+      "screenshots": []
     }
   ],
   "housePrints": [
     {
       "slug": "toothbrush-holder",
       "title": "Toothbrush Holder",
+      "hidden": true,
       "placeholder": true,
+      "context": "2026",
       "tags": [
         "3D printing",
         "home"
@@ -217,7 +508,35 @@
     {
       "slug": "bike-rack",
       "title": "Bike Rack",
-      "placeholder": true,
+      "image": "images/bike-rack.jpg",
+      "imagePosition": "50% 50%",
+      "summary": "A wall-mounted bike rack designed to go up with no tools: 3D-printed mounts hung on 3M Claw drywall hooks, with dowels pinned in place like a truss.",
+      "body": [
+        "A wall-mounted bike rack designed to go up with no tools: 3D-printed mounts hung on 3M Claw drywall hooks, with dowels pinned in place like a truss.",
+        "The goal was a rack anyone could install without a drill. The 3D-printed mounts hang on 3M Claw hooks, and two wooden dowels angle out from them to cradle the bike's frame. I sketched the forces first, then modeled the mounts in Fusion 360.",
+        "Instead of fixing the dowels rigidly, I held them with pins and ribbon. The bike's frame rests right at the joint where the dowels meet, so the rack works like a truss: each member only carries push or pull along its length, and the joints don't have to resist bending.",
+        "Over time the Claw hooks kept working loose under the bike's weight, so a later version switched to screws."
+      ],
+      "screenshots": [
+        {
+          "src": "images/bike-rack-side.jpg",
+          "alt": "A dowel angled up from its wall mount to a 3D-printed cradle under the bike's frame."
+        },
+        {
+          "src": "images/bike-rack-mount.jpg",
+          "alt": "Close-up of a white 3D-printed wall mount holding the end of a dowel."
+        },
+        {
+          "src": "images/bike-rack-sketch.jpg",
+          "alt": "Hand-drawn sketch of the forces on the angled dowel and wall mount."
+        },
+        {
+          "src": "images/bike-rack-cad.jpg",
+          "alt": "The wall mount modeled in Fusion 360."
+        }
+      ],
+      "status": "Built",
+      "context": "2024",
       "tags": [
         "3D printing",
         "home"
@@ -225,8 +544,21 @@
     },
     {
       "slug": "clothes-rack",
-      "title": "Clothes Rack",
-      "placeholder": true,
+      "title": "Towel and Clothes Rack",
+      "image": "images/clothes-rack.jpg",
+      "imagePosition": "50% 35%",
+      "summary": "A wall-mounted towel shelf and clothes rack made from wooden dowels held by 3D-printed wall mounts.",
+      "body": [
+        "A wall-mounted towel shelf and clothes rack made from wooden dowels held by 3D-printed wall mounts. A hanging rail runs across the front, angled dowels brace it back to the wall, and slats across the top make a shelf for towels."
+      ],
+      "screenshots": [
+        {
+          "src": "images/clothes-rack-bare.jpg",
+          "alt": "The empty rack on the wall: a dowel rail and shelf braced by two angled dowels set into white 3D-printed mounts."
+        }
+      ],
+      "status": "Built",
+      "context": "2024",
       "tags": [
         "3D printing",
         "home"
@@ -242,10 +574,174 @@
         "A 3D-printed conical spike that sits in the soil and slowly releases water, so a potted plant can go longer between waterings."
       ],
       "status": "Built",
+      "context": "2026",
       "tags": [
         "3D printing",
         "plants"
       ]
+    },
+    {
+      "slug": "soap-holder",
+      "title": "Soap Holder",
+      "hidden": true,
+      "image": "images/soap-holder.jpg",
+      "imagePosition": "50% 40%",
+      "summary": "A 3D-printed shower shelf that holds a bar of soap, with a hook underneath for a brush.",
+      "body": [
+        "A 3D-printed shower shelf that holds a bar of soap, with a hook underneath for a brush."
+      ],
+      "status": "Built",
+      "context": "2026",
+      "tags": [
+        "3D printing",
+        "home"
+      ]
     }
-  ]
+  ],
+  "education": {
+    "school": "Brown University",
+    "degree": "B.S. Computer Engineering (ABET-accredited)",
+    "year": "2021",
+    "groups": [
+      {
+        "name": "Hardware",
+        "courses": [
+          [
+            "ENGN 1640",
+            "Design of Computing Systems"
+          ],
+          [
+            "ENGN 1600",
+            "Digital Integrated Circuits"
+          ],
+          [
+            "ENGN 1630",
+            "Digital Electronics Systems Design"
+          ],
+          [
+            "ENGN 0520",
+            "Electrical Circuits and Signals"
+          ],
+          [
+            "ENGN 0510",
+            "Electricity and Magnetism"
+          ]
+        ]
+      },
+      {
+        "name": "Systems and control",
+        "courses": [
+          [
+            "ENGN 1931Y",
+            "Control Systems Engineering"
+          ],
+          [
+            "ENGN 1570",
+            "Linear System Analysis"
+          ],
+          [
+            "ENGN 0040",
+            "Dynamics and Vibrations"
+          ]
+        ]
+      },
+      {
+        "name": "Design",
+        "courses": [
+          [
+            "ENGN 1001",
+            "Engineering Design II",
+            "the-louis"
+          ],
+          [
+            "ENGN 0031",
+            "Honors Introduction to Engineering"
+          ]
+        ]
+      },
+      {
+        "name": "Computer science",
+        "courses": [
+          [
+            "CSCI 1470",
+            "Deep Learning"
+          ],
+          [
+            "CSCI 1670",
+            "Operating Systems"
+          ],
+          [
+            "CSCI 0320",
+            "Software Engineering"
+          ],
+          [
+            "CSCI 0330",
+            "Computer Systems"
+          ],
+          [
+            "CSCI 0170/0180",
+            "Computer Science: An Integrated Introduction"
+          ],
+          [
+            "CSCI 1970",
+            "Independent Study"
+          ]
+        ]
+      },
+      {
+        "name": "Math and science",
+        "courses": [
+          [
+            "MATH 0520",
+            "Linear Algebra"
+          ],
+          [
+            "MATH 0200",
+            "Intermediate Calculus"
+          ],
+          [
+            "APMA 0330",
+            "Methods of Applied Mathematics"
+          ],
+          [
+            "APMA 1650",
+            "Statistical Inference"
+          ],
+          [
+            "CHEM 0330",
+            "Equilibrium, Rate and Structure"
+          ]
+        ]
+      },
+      {
+        "name": "Humanities and languages",
+        "courses": [
+          [
+            "HIST 0522O",
+            "The Enlightenment"
+          ],
+          [
+            "RELS 0015",
+            "Sacred Stories"
+          ],
+          [
+            "RELS 0415",
+            "Ancient Christian Culture"
+          ],
+          [
+            "LITR 0110B",
+            "Poetry I"
+          ],
+          [
+            "SOC 0310",
+            "Theory and Practice of Engaged Scholarship"
+          ],
+          [
+            "HISP 0300/0400",
+            "Intermediate Spanish I and II"
+          ]
+        ]
+      }
+    ]
+  }
 }
