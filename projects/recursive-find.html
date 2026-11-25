@@ -15,9 +15,7 @@
     <a href="../index.html#featured">Featured</a>
     <a href="../index.html#projects">Projects</a>
     <a href="../index.html#classes">Classes</a>
-    <a href="../garden.html">Garden</a>
     <a href="../index.html#about">About</a>
-    <a href="../index.html#contact">Contact</a>
   </nav>
 </header>
 
@@ -30,7 +28,7 @@
   </aside>
   <article>
     <h1>Recursive Find</h1>
-    <p>Ctrl+F, but recursive. A Chrome side-panel extension that searches the page you're on <em>and every page it links to</em>, down to a depth you choose. Results stream in live, sorted by hit count, with a preview of each match. Click one and the page opens scrolled to the highlighted text.</p><p>Plain text, whole-word or regex matching, with options for match case, same site only, and stop at the first hit. Under the hood it's a breadth-first crawl that fetches each page once, strips it to text and runs Knuth–Morris–Pratt search across a pool of Web Workers, so pages are fetched and searched in parallel.</p><p>There's also <code>rfind</code>, a headless command-line version packaged as an AI agent skill. One call answers "which pages on this site mention X?" and returns only the matching pages with short snippets, with agent-safe defaults like a page cap and robots.txt support.</p><p><strong><a href="https://chromewebstore.google.com/detail/recursive-find/iadjimgkagkoihafceiallheifeoiieg">Get it on the Chrome Web Store &rarr;</a></strong></p><figure class="project-shot"><img src="../images/recursive-find.png" alt="Recursive Find in Chrome&#x27;s side panel next to a Wikipedia article: searching &#x27;texas&#x27; at depth 2 found 34 hits across 20 linked pages, each with highlighted snippets."></figure>
+    <p>Ctrl+F, but recursive. A Chrome side-panel extension that searches the page you're on <em>and every page it links to</em>, down to a depth you choose. Results stream in live, sorted by hit count, with a preview of each match. Click one and the page opens scrolled to the highlighted text.</p><p>Plain text, whole-word or regex matching, with options for match case, same site only, and stop at the first hit. It's a breadth-first crawl that fetches each page once, strips it to text and runs Knuth–Morris–Pratt search across a pool of Web Workers, so pages are fetched and searched in parallel.</p><p>There's also <code>rfind</code>, a headless command-line version packaged as an AI agent skill. One call answers "which pages on this site mention X?" and returns only the matching pages with short snippets, with agent-safe defaults like a page cap and robots.txt support.</p><p><strong><a href="https://chromewebstore.google.com/detail/recursive-find/iadjimgkagkoihafceiallheifeoiieg">Get it on the Chrome Web Store &rarr;</a></strong></p><figure class="project-shot"><img src="../images/recursive-find.png" alt="Recursive Find in Chrome&#x27;s side panel next to a Wikipedia article: searching &#x27;texas&#x27; at depth 2 found 34 hits across 20 linked pages, each with highlighted snippets."></figure>
   </article>
 </main>
 <footer class="site-footer">&copy; 2026 Garrett Warren</footer>

@@ -11,9 +11,9 @@
       "title": "StoveDetector",
       "image": "images/stovedetector.jpg",
       "imagePosition": "50% 45%",
-      "summary": "A small sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire.",
+      "summary": "A sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire.",
       "body": [
-        "A small sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire. Started as a personal safety fix (formerly \"KitchenEye\"); now a hardware startup heading into its first pilot homes.",
+        "A sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire. Started as a personal safety fix (formerly \"KitchenEye\"); now a hardware startup heading into its first pilot homes.",
         "Custom carrier board, Wi-Fi alerts, and a pre-pilot FCC compliance process I'm running myself."
       ],
       "links": [
@@ -93,8 +93,8 @@
       "title": "Future You: Affect Extension",
       "summary": "A sensing plugin for MIT Media Lab's Future You that reads how you answer (face, voice and heart rate), not just what you type.",
       "body": [
-        "A sensing plugin for MIT Media Lab's <em>Future You</em>, where people talk with an AI simulation of their older self. Future You builds that persona only from what you type; The extension also watches <em>how</em> you answer: face (MediaPipe blendshapes), voice (pitch, loudness, pauses) and heart rate from a Bluetooth strap. The output is an affect profile and a persona prompt, so the future-self conversation knows which topics made you tense, energised, hesitant or calm.",
-        "Signals, not verdicts: every feature is measured against your own 45-second resting baseline, it never outputs emotion labels, and your self-report overrides the sensors when they disagree. All sensing runs locally in the browser."
+        "A sensing plugin for MIT Media Lab's <em>Future You</em>, where people talk with an AI simulation of their older self. Future You builds that persona only from what you type. The extension also watches <em>how</em> you answer: face (MediaPipe blendshapes), voice (pitch, loudness, pauses) and heart rate from a Bluetooth strap. The output is an affect profile and a persona prompt, so the future-self conversation knows which topics made you tense, energised, hesitant or calm.",
+        "Every feature is measured against your own 45-second resting baseline. It never outputs emotion labels, and your self-report overrides the sensors when they disagree. All sensing runs locally in the browser."
       ],
       "context": "2026",
       "status": "In development",
@@ -110,8 +110,8 @@
       "summary": "An exploratory thermal-camera study of surface warmth across my head, chest and body while I work at a laptop.",
       "body": [
         "I want to use a thermal camera to observe warm spots across my head, chest and body while working at my laptop, and explore how those patterns change over a work session.",
-        "An early affective-computing portfolio concept for my MIT Media Lab application, not a completed experiment. I plan to pair thermal observations with my own notes about the experience.",
-        "Thermal images show surface temperature, not emotions or core body temperature. Clothing, room temperature, movement and camera position affect readings; connections to subjective state remain questions to investigate, not validated claims."
+        "This is a concept, not a completed experiment. I plan to pair the thermal observations with my own notes about the experience.",
+        "Thermal images show surface temperature, not emotions or core body temperature, and clothing, room temperature, movement and camera position all affect the readings."
       ],
       "context": "2026",
       "status": "Concept",
@@ -182,7 +182,7 @@
       "body": [
         "A shared workspace for United Church on the Green, built around one question: how can the church support neighbors on the New Haven Green who are experiencing homelessness and the effects of poverty? The team records every organization, service and idea as a card, and the same cards show up in four views: a mind map for thinking, a street map for where things are, a calendar for when they are open, and a directory for looking things up.",
         "Everyone edits the same map at once. The map is a Yjs document synced over WebSockets, so two people can type in the same card, and edits made during a dropped connection stay on the device and are sent again when it returns. Every save is kept in a version history. Accounts are created with an invite code, and nothing is visible without signing in.",
-        "A small Node server with a vanilla JS front end, bundled with esbuild and hosted on Fly.io. Every push to main is tested and deployed automatically."
+        "A Node server with a vanilla JS front end, bundled with esbuild and hosted on Fly.io. Every push to main is tested and deployed automatically."
       ],
       "screenshots": [
         {
@@ -219,9 +219,9 @@
       "title": "Agent Dashboard",
       "image": "images/agent-dashboard-demo.png",
       "imagePosition": "50% 0%",
-      "summary": "One home base for my AI agents: ask once, it routes to the right specialist, and it only interrupts me when an agent truly needs me.",
+      "summary": "One home base for my AI agents: ask once, it routes to the right specialist, and it only interrupts me when an agent needs me.",
       "body": [
-        "A private home base for the AI agents that help run my projects (built on OpenClaw). I type a request once and it goes to the right specialist: a local embedding model matches it against each agent's profile, with an LLM router as the fallback. Conversations are grouped by project, live work streams in as it happens, and anything an agent is actually blocked on (an approval, a question) lands in one Inbox, kept separate from the to-do list, so nothing nags unless it needs me.",
+        "A private home base for the AI agents that help run my projects (built on OpenClaw). I type a request once and it goes to the right specialist: a local embedding model matches it against each agent's profile, with an LLM router as the fallback. Conversations are grouped by project, live work streams in as it happens, and anything an agent is blocked on (an approval, a question) lands in one Inbox, kept separate from the to-do list, so nothing nags unless it needs me.",
         "A nightly cleanup asks each idle chat's agent to save what mattered before the chat is archived.",
         "Plain Node and vanilla JS with no dependencies or build step. It runs locally only and talks to the OpenClaw Gateway over its WebSocket protocol with least-privilege access."
       ],
@@ -268,7 +268,7 @@
       "summary": "Ctrl+F, but recursive: a Chrome extension that searches the page you're on and every page it links to.",
       "body": [
         "Ctrl+F, but recursive. A Chrome side-panel extension that searches the page you're on <em>and every page it links to</em>, down to a depth you choose. Results stream in live, sorted by hit count, with a preview of each match. Click one and the page opens scrolled to the highlighted text.",
-        "Plain text, whole-word or regex matching, with options for match case, same site only, and stop at the first hit. Under the hood it's a breadth-first crawl that fetches each page once, strips it to text and runs Knuth–Morris–Pratt search across a pool of Web Workers, so pages are fetched and searched in parallel.",
+        "Plain text, whole-word or regex matching, with options for match case, same site only, and stop at the first hit. It's a breadth-first crawl that fetches each page once, strips it to text and runs Knuth–Morris–Pratt search across a pool of Web Workers, so pages are fetched and searched in parallel.",
         "There's also <code>rfind</code>, a headless command-line version packaged as an AI agent skill. One call answers \"which pages on this site mention X?\" and returns only the matching pages with short snippets, with agent-safe defaults like a page cap and robots.txt support.",
         "<strong><a href=\"https://chromewebstore.google.com/detail/recursive-find/iadjimgkagkoihafceiallheifeoiieg\">Get it on the Chrome Web Store &rarr;</a></strong>"
       ],

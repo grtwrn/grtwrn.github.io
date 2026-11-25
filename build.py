@@ -82,6 +82,29 @@ def tile(p):
       </a>"""
 
 
+# The contact form (and its nav link) only appear once WEB3FORMS_KEY is set.
+CONTACT_NAV = '    <a href="{prefix}index.html#contact">Contact</a>\n' if WEB3FORMS_KEY else ""
+
+
+def contact_html():
+    if not WEB3FORMS_KEY:
+        return ""
+    return f"""
+  <section class="contact" id="contact">
+    <h2 class="grid-heading">Contact</h2>
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
+      <input type="hidden" name="subject" value="New message from your portfolio site">
+      <input type="checkbox" name="botcheck" class="contact-botcheck" tabindex="-1" autocomplete="off">
+      <label>Name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Message<textarea name="message" rows="6" required></textarea></label>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+"""
+
+
 def topbar(prefix):
     return f"""
 <header class="topbar">
@@ -90,10 +113,8 @@ def topbar(prefix):
     <a href="{prefix}index.html#featured">Featured</a>
     <a href="{prefix}index.html#projects">Projects</a>
     <a href="{prefix}index.html#classes">Classes</a>
-    <a href="{prefix}garden.html">Garden</a>
     <a href="{prefix}index.html#about">About</a>
-    <a href="{prefix}index.html#contact">Contact</a>
-  </nav>
+{CONTACT_NAV.format(prefix=prefix)}  </nav>
 </header>"""
 
 
@@ -205,19 +226,7 @@ def build_index(data):
     <p><a href="{GITHUB}">github.com/grtwrn</a></p>
   </section>
 
-  <section class="contact" id="contact">
-    <h2 class="grid-heading">Contact</h2>
-    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
-      <input type="hidden" name="subject" value="New message from your portfolio site">
-      <input type="checkbox" name="botcheck" class="contact-botcheck" tabindex="-1" autocomplete="off">
-      <label>Name<input type="text" name="name" required autocomplete="name"></label>
-      <label>Email<input type="email" name="email" required autocomplete="email"></label>
-      <label>Message<textarea name="message" rows="6" required></textarea></label>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-</main>"""
+{contact_html()}</main>"""
     (ROOT / "index.html").write_text(page("Garrett Warren", body, ""))
 
 
@@ -268,20 +277,6 @@ def build_project(p):
     out.write_text(page(f"{p['title']} · Garrett Warren", body, prefix))
 
 
-def build_garden():
-    """Digital garden: placeholder until there are notes to plant."""
-    body = f"""
-<main>
-  <section class="about" id="garden">
-    <h2 class="grid-heading grid-heading-first">Digital Garden</h2>
-    <p>A place for notes that are still growing: half-formed ideas, things I'm reading, and
-    questions I haven't answered yet. Unlike the projects, nothing here is finished.</p>
-    <p class="todo">Nothing planted yet. Notes coming.</p>
-  </section>
-</main>"""
-    (ROOT / "garden.html").write_text(page("Digital Garden · Garrett Warren", body, ""))
-
-
 def main():
     data = json.loads((ROOT / "projects.json").read_text())
     for key in ("projects", "housePrints"):
@@ -291,7 +286,6 @@ def main():
         data[key] = [p for p in data[key] if not p.get("hidden")]
     (ROOT / "projects").mkdir(exist_ok=True)
     build_index(data)
-    build_garden()
     for p in data["projects"] + data["housePrints"]:
         build_project(p)
 
