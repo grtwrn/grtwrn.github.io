@@ -49,9 +49,10 @@ def glyph_color(p):
 
 
 def head_html(p, prefix):
-    if p.get("image"):
-        pos = p.get("imagePosition", "50% 50%")
-        return (f'<div class="tile-head" style="background-image: url(\'{prefix}{p["image"]}\'); '
+    image = p.get("tileImage") or p.get("image")  # tileImage: optional square-friendly photo for the grid
+    if image:
+        pos = p.get("tilePosition") or p.get("imagePosition", "50% 50%")
+        return (f'<div class="tile-head" style="background-image: url(\'{prefix}{image}\'); '
                 f'background-position: {pos};"></div>')
     return (f'<div class="tile-head tile-head-glyph" style="background: {glyph_color(p)};">'
             f'<span>{escape(monogram(p["title"]))}</span></div>')

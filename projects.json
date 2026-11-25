@@ -9,12 +9,35 @@
     {
       "slug": "stovedetector",
       "title": "StoveDetector",
-      "image": "images/stovedetector.jpg",
-      "imagePosition": "50% 45%",
+      "image": "images/stovedetector-white-black.jpg",
+      "tileImage": "images/stovedetector-black-angle.jpg",
+      "imagePosition": "50% 50%",
       "summary": "A sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire.",
       "body": [
         "A sensor that notices when a stove has been left on and unattended, and sounds an alert before it becomes a fire. Started as a personal safety fix (formerly \"KitchenEye\"); now a hardware startup heading into its first pilot homes.",
         "Custom carrier board, Wi-Fi alerts, and a pre-pilot FCC compliance process I'm running myself."
+      ],
+      "screenshots": [
+        {
+          "src": "images/stovedetector-black-angle.jpg",
+          "alt": "An angled close-up of the black StoveDetector, showing its printed texture, heat-sensor window, USB-C port and ball-joint mount."
+        },
+        {
+          "src": "images/stovedetector-color-mounts.jpg",
+          "alt": "Black and white StoveDetector units on matching adjustable ball-joint mounts, viewed from the side."
+        },
+        {
+          "src": "images/stovedetector-install-under-cabinet.jpg",
+          "alt": "One StoveDetector unit mounted under the cabinet beside an electric stove, with its power cord clipped down the wall to a nearby outlet."
+        },
+        {
+          "src": "images/stovedetector-install-backsplash.jpg",
+          "alt": "One StoveDetector unit mounted on the backsplash beside an electric stove, with its power cord to the nearby outlet."
+        },
+        {
+          "src": "images/stovedetector-app-live.png",
+          "alt": "The app's live view: a coarse heat picture with one hot burner, and a graph of the hottest spot over the last 15 minutes crossing the dashed alarm-temperature line."
+        }
       ],
       "links": [
         {
