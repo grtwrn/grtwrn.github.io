@@ -197,11 +197,6 @@ def build_index(data):
     projects = "".join(tile(p) for p in more)
     body = f"""
 <section class="hero">
-  <div class="hero-photos">
-    <div style="background-image: url('images/stovedetector.jpg'); background-position: 50% 45%;"></div>
-    <div style="background-image: url('images/the-louis-front.jpg'); background-position: 95% 50%;"></div>
-    <div style="background-image: url('images/planter-waterer.jpg'); background-position: 50% 45%;"></div>
-  </div>
   <div class="hero-content">
     <p class="hero-name">Garrett Warren</p>
     <h1>{escape(TAGLINE)}</h1>

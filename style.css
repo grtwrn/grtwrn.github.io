@@ -1,4 +1,4 @@
-/* Layout modeled on MIT Media Lab group project pages: tinted photo hero,
+/* Layout modeled on MIT Media Lab group project pages: blueprint-grid hero,
    left sidebar, and a grid of square-image tiles with bold titles,
    grey excerpts and #tags. */
 
@@ -62,27 +62,22 @@ a { color: inherit; }
   position: relative;
   height: 560px;
   overflow: hidden;
-  background: var(--green);
+  /* Blueprint: fine and major grid lines over a deep green gradient. */
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px) 0 0 / 120px 120px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.10) 1px, transparent 1px) 0 0 / 120px 120px,
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px) 0 0 / 24px 24px,
+    radial-gradient(ellipse at 75% 20%, rgba(70, 190, 140, 0.35), transparent 60%),
+    linear-gradient(135deg, #10221b 0%, #17503a 55%, #1f7a55 100%);
 }
 
-.hero-photos {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.hero-photos div {
-  background-size: cover;
-  filter: grayscale(1) brightness(1.25) contrast(1.1);
-}
-
+/* Fade the grid out toward the bottom so the tagline sits on clean colour. */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: #2e8a62;
-  mix-blend-mode: multiply;
+  background: linear-gradient(to top, rgba(16, 34, 27, 0.75), transparent 65%);
 }
 
 .hero-content {
