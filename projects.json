@@ -147,29 +147,11 @@
     {
       "slug": "video-journal",
       "title": "Video Journal",
-      "image": "images/video-journal.jpg",
-      "imagePosition": "50% 28%",
-      "tileImage": "images/video-journal-tile.jpg",
-      "tilePosition": "0% 0%",
       "summary": "A short nightly video journal: talk to the camera for a few minutes, with no editing and no correcting yourself.",
       "body": [
         "A short nightly video journal: talk to the camera for a few minutes, with no editing and no correcting yourself, and watch your own story and mood take shape over weeks.",
         "Each night has three steps: tell the day's story to the camera, say a few calming phrases out loud, then rate calm and energy and note one thing you're grateful for.",
         "Everything stays on the computer. Recordings are transcribed locally with whisper.cpp, and face and voice measurements (smile, speaking pace, long pauses) run in the browser. The journal page charts them next to your own calm and energy ratings, compared only with your own other nights. They are measurements, not emotion labels."
-      ],
-      "screenshots": [
-        {
-          "src": "images/video-journal.jpg",
-          "wide": true,
-          "alt": "Journal page: nights recorded and streaks, then twelve weeks of small charts for calm, energy, smile, speaking pace, long pauses and story length, above a list of nightly entries.",
-          "caption": "The journal page, shown with made-up demo entries."
-        },
-        {
-          "src": "images/video-journal-entry.jpg",
-          "wide": true,
-          "alt": "One night's entry: the recording, its transcript, the check-in, and each measurement compared with the usual for other nights.",
-          "caption": "One night's entry, also demo data."
-        }
       ],
       "context": "2026",
       "status": "In development",
