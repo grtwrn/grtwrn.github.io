@@ -320,6 +320,48 @@
       ]
     },
     {
+      "slug": "sixth-sense-for-stroke",
+      "title": "A Sixth Sense for Stroke",
+      "tileImage": "images/sixth-sense-tile.png",
+      "tilePosition": "0% 0%",
+      "summary": "A deep learning model that predicts, from a stroke patient's CT scan and the doctor's notes, how well a clot-removal procedure will work before it is performed.",
+      "body": [
+        "A deep learning model that predicts how a mechanical thrombectomy, the procedure that removes the clot in an acute ischemic stroke, will go before it is performed. From a patient's CT angiography scan and the doctor's notes, it predicts the TICI score (how much blood flow is restored) and the number of passes the radiologist will need to clear the clot.",
+        "Final project for Brown's Deep Learning course (CSCI 1470), built on about 390 anonymized patient scans from the Rhode Island Hospital radiology AI lab. The data stayed on a hospital machine, and we worked on it over remote desktop.",
+        "Each scan is a stack of 64 slices, so the model uses a 3D convolutional network for the images, an embedding layer for the doctor's notes on the occlusion, and a vector of the other patient features. The three are concatenated and passed through dense layers. Written in Python with TensorFlow.",
+        "It reached about 70% accuracy on both predictions and beat proportional random guessing on every class with meaningful samples. When it is wrong it tends to be conservative: it underpredicts blood flow and overpredicts the number of passes."
+      ],
+      "screenshots": [
+        {
+          "src": "images/sixth-sense-poster.png",
+          "alt": "Project poster: introduction, the 3D CNN plus embedding model diagram, training accuracy per epoch, and per-class accuracy against random guessing for TICI score and number of passes.",
+          "wide": true
+        }
+      ],
+      "links": [
+        {
+          "label": "Final write-up",
+          "url": "https://docs.google.com/document/d/1DhlyKjfbQcb-fGescl42WXB9gXYoU781M96-g71IbuI/edit?usp=sharing"
+        },
+        {
+          "label": "Presentation video",
+          "url": "https://www.youtube.com/watch?v=PexIe-kxg2c"
+        },
+        {
+          "label": "Devpost",
+          "url": "https://devpost.com/software/predicting-functional-outcomes-of-mechanical-thrombectomy"
+        }
+      ],
+      "context": "Brown CSCI 1470 · 2020",
+      "people": "with Pete Harinsuit · Chris Nivera",
+      "status": "Completed",
+      "tags": [
+        "deep learning",
+        "medical imaging",
+        "stroke"
+      ]
+    },
+    {
       "slug": "drone",
       "title": "PiDrone",
       "image": "images/drone-hero.jpg",
@@ -687,7 +729,8 @@
         "courses": [
           [
             "CSCI 1470",
-            "Deep Learning"
+            "Deep Learning",
+            "sixth-sense-for-stroke"
           ],
           [
             "CSCI 1670",
